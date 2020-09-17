@@ -22,7 +22,7 @@ public class TP01Ex16{
         out.printf("sen %.0f° = %.2f\n", ang, Math.sin(rad));
         out.printf("cos %.0f° = %.2f\n", ang, Math.cos(rad));
         
-        if (Math.cos(rad) == 0) {
+        if (String.format("%.6f",Math.cos(rad)).equals("0,000000") || String.format("%.6f",Math.cos(rad)).equals("-0,000000")) {
             out.printf("tg %.0f° ∉ R\n", ang);
             out.printf("sec %.0f° ∉ R\n", ang);
         }
